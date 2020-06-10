@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="seleium4">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/lib/seleium4" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/lib/seleium4" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/lib/seleium4" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/lib/seleium4" recursive="false" type="SOURCES" />
+  </library>
+</component>
