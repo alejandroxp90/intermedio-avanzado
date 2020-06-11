@@ -1,5 +1,4 @@
 package mercury.pages;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -20,6 +19,11 @@ public class RegisterPage {
     By emailUserName = By.id("email");
     By passUserName = By.name("password");
     By confirmPassUserName = By.name("confirmPassword");
+    By submitRegister = By.name("register");
+
+    public RegisterPage(WebDriver driver) {
+        this.driver = driver;
+    }
 
     public void inputFirstName(){
         driver.findElement(iTextFirstName).sendKeys("Alejandro");
@@ -70,9 +74,14 @@ public class RegisterPage {
         driver.findElement(confirmPassUserName).sendKeys("123qwe");
     }
 
+    public void submitRegister(){
+        driver.findElement(submitRegister).click();
+    }
+
     public String getTitleRegister(){
         return driver.getTitle();
     }
+
 
 
 }
