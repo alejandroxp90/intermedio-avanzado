@@ -19,9 +19,69 @@ public class HomePage {
     By lnkCONTACT = By.linkText("CONTACT");
     By txtUserName = By.name("userName");
     By pwPass = By.name("password");
+    By btnlogin = By.name("login");
 
+    public HomePage(WebDriver driver) {
+        this.driver = driver;
+    }
 
+    public void clickLnkHome(){
+        driver.findElement(lnkHome).click();
+    }
 
+    public void clicklnkFlights(){
+        driver.findElement(lnkFlights).click();
+    }
 
+    public void clicklnkHotels(){
+        driver.findElement(lnkHotels).click();
+    }
 
+    public void clicklnkCarRentals(){
+        driver.findElement(lnkCarRentals).click();
+    }
+
+    public void clicklnkCruises(){
+        driver.findElement(lnkCruises).click();
+    }
+
+    public void clicklnkDestinations(){
+        driver.findElement(lnkDestinations).click();
+    }
+
+    public void clicklnkVacations(){
+        driver.findElement(lnkVacations).click();
+    }
+
+    public void clicklnkSIGNON(){
+        driver.findElement(lnkSIGNON).click();
+    }
+
+    public void clicklnkREGISTER(){
+        driver.findElement(lnkREGISTER).click();
+    }
+
+    public void clicklnkSUPPORT(){
+        driver.findElement(lnkSUPPORT).click();
+    }
+
+    public void clicklnkCONTACT(){
+        driver.findElement(lnkCONTACT).click();
+    }
+
+    public void entertxtUserName(){
+        driver.findElement(txtUserName).sendKeys("");
+    }
+
+    public void enterPass(){
+        driver.findElement(pwPass).sendKeys("");
+    }
+
+    public void submitLogin(){
+        driver.findElement(btnlogin).click();
+    }
+
+    public String getTitleText(){
+        return driver.getTitle();
+    }
 }
