@@ -25,63 +25,60 @@ public class RegisterPage {
         this.driver = driver;
     }
 
-    public void inputFirstName(){
-        driver.findElement(iTextFirstName).sendKeys("Alejandro");
+    public void inputFirstName(String strFirstName){
+        driver.findElement(iTextFirstName).sendKeys(strFirstName);
     }
 
-    public void inputLastName(){
-        driver.findElement(iTextLastName).sendKeys("Juarez");
+    public void inputLastName(String strLastName){
+        driver.findElement(iTextLastName).sendKeys(strLastName);
     }
 
-    public void inputPhone(){
-        driver.findElement(iTextPhone).sendKeys("5555225588");
+    public void inputPhone(String strPhone){
+        driver.findElement(iTextPhone).sendKeys(strPhone);
     }
 
-    public void inputEmail(){
-        driver.findElement(itextUserName).sendKeys("alexdf08@hotmail.com");
+    public void inputEmail(String streMail){
+        driver.findElement(itextUserName).sendKeys(streMail);
     }
 
-    public void address(){
-        driver.findElement(itextaddress1).sendKeys("Lago peipus 18");
+    public void address(String strAddress){
+        driver.findElement(itextaddress1).sendKeys(strAddress);
     }
 
-    public void city(){
-        driver.findElement(itextCity).sendKeys("cdmx");
+    public void city(String strCity){
+        driver.findElement(itextCity).sendKeys(strCity);
     }
 
-    public void state(){
-        driver.findElement(itextState).sendKeys("DF");
+    public void state(String strState){
+        driver.findElement(itextState).sendKeys(strState);
     }
 
-    public void codePostal(){
-        driver.findElement(iTextCodePostal).sendKeys("05050");
+    public void codePostal(String strPostalCode){
+        driver.findElement(iTextCodePostal).sendKeys(strPostalCode);
     }
 
-    public void inputCountry(){
+    public void inputCountry(int intCountry){
         Select drpCountry = new Select(driver.findElement(selectCountry));
-        drpCountry.selectByVisibleText("MEXICO");
+        drpCountry.selectByIndex(intCountry);
     }
 
-    public void userName(){
-        driver.findElement(emailUserName).sendKeys("alexdf08@hotmail.com");
+    public void userName(String strUserName){
+        driver.findElement(emailUserName).sendKeys(strUserName);
     }
 
-    public void inputPassword(){
-        driver.findElement(passUserName).sendKeys("123qwe");
+    public void inputPassword(String strPass){
+        driver.findElement(passUserName).sendKeys(strPass);
     }
 
-    public void inputConfirmPassword(){
-        driver.findElement(confirmPassUserName).sendKeys("123qwe");
+    public void inputConfirmPassword(String strConfirmPass){
+        driver.findElement(confirmPassUserName).sendKeys(strConfirmPass);
     }
 
-    public void submitRegister(){
+    public void submitRegister(String strSubmitRegister){
         driver.findElement(submitRegister).click();
     }
 
     public String getTitleRegister(){
         return driver.getTitle();
     }
-
-
-
 }
